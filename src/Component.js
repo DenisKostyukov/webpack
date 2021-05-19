@@ -1,8 +1,13 @@
-module.exports = class Component{
+class Component{
   constructor(props){
     this.props= props;
   }
   render(){
-    document.getElementById("root").append("test");
+    const elem = document.createElement('h1');
+    elem.textContent = 'Hello webpack';
+    elem.classList.add('heading');
+    document.getElementById("root").append(elem);
   }
 }
+
+export default Component;
